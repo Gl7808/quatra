@@ -1,0 +1,37 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+@use 'helpers' as *;
+
+
+@import
+"blocks/header",
+"blocks/bg",
+"blocks/button",
+"blocks/burger",
+"blocks/glow",
+"blocks/scroll-indicator",
+"blocks/hero",
+"blocks/nav",
+"blocks/logo",
+"blocks/sidebar",
+"blocks/link-animation",
+"blocks/vertical",
+"blocks/main-link",
+"blocks/box",
+"blocks/map",
+"blocks/social",
+"blocks/phone",
+"blocks/atmosphere",
+"blocks/bento",
+"blocks/lounge",
+"blocks/tournament",
+"blocks/pin",
+"blocks/game",
+"blocks/gallery",
+"blocks/block-title",
+"blocks/footer";
+
+

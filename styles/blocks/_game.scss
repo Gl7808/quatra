@@ -1,0 +1,141 @@
+
+.game {
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
+
+  &__title {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(100);
+    align-items: center;
+    h2 {
+      position: relative;
+
+      span {
+        font-size: rem(12);
+        position: absolute;
+        left: 0;
+        bottom: rem(-10);
+        color: var(--color-dark-40-5);
+      }
+    }
+
+    p {
+      font-size: rem(14);
+    }
+
+    @include mobile{
+      grid-template-columns: 1fr;
+      gap: rem(10);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; // важно для маски
+    gap: rem(20);
+
+    @include mobile{
+      gap: rem(50);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(20);
+    white-space: nowrap;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: rem(100); // ширина зоны плавного появления
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #111, #000 0%, transparent 100%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #111, #000 0%, transparent 100%);
+    }
+
+    // Трек с анимацией
+    &-track {
+      display: flex;
+      gap: rem(20);
+      will-change: transform;
+
+      // Пауза при наведении (или замедление)
+      &:hover {
+        animation-play-state: paused;
+        // Или замедление:
+        // animation-duration: 90s;
+        // transition: animation-duration 0.3s ease;
+      }
+    }
+  }
+
+  &__item {
+    padding: rem(15) rem(25);
+    border: var(--border-def, 1px solid var(--color-dark-40-5));
+    white-space: nowrap;
+    flex-shrink: 0; // чтобы элементы не сжимались
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      background-color: var(--color-dark-15);
+      color: var(--color-accent-lounge);
+      transform: translateY(-2px);
+      border-color: var(--color-accent-lounge);
+    }
+  }
+}
+
+// Маска по краям контейнера (белый/тёмный градиент)
+.game__container {
+  position: relative;
+
+}
+
+// Анимация прокрутки
+@keyframes scrollGames {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); // сдвигаем на половину (дублированный контент)
+  }
+}
+
+// Адаптив
+@media (max-width: 768px) {
+  .game__container::before,
+  .game__container::after {
+    width: rem(40);
+  }
+
+  .game__item {
+    padding: rem(10) rem(15);
+    font-size: rem(12);
+  }
+}

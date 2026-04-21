@@ -1,0 +1,98 @@
+/* ===== Lounge Section ===== */
+.lounge {
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.lounge__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  @include mobile{
+    padding: var(--container-padding-x);
+  }
+
+  .block-title{
+    h2{
+      color: var(--color-accent-lounge);
+    }
+  }
+}
+
+.lounge__track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  padding-right: 2rem;
+}
+.lounge__card:last-child {
+  padding-right: 0;
+}
+
+.lounge__card {
+  flex: 0 0 100vw;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 2rem;
+  min-height: 70vh;
+}
+
+.lounge__content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.lounge__title {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.lounge__text {
+  color: #b0b0b0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 90%;
+
+  @include mobile{
+    font-size: rem(14);
+  }
+}
+
+.lounge__image {
+  flex: 1;
+  max-width: 500px;
+  height: 60vh;
+
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.lounge__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Mobile Fallback ===== */
+@media (max-width: 1024px) {
+  .lounge__track {
+    flex-direction: column;
+    width: 100%;
+  }
+  .lounge__card {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 3rem 0;
+    min-height: auto;
+  }
+  .lounge__image {
+    max-width: 100%;
+    height: 35vh;
+    width: 100%;
+  }
+  .lounge__text { max-width: 100%; }
+}

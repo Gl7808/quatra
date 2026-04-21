@@ -1,0 +1,61 @@
+@use 'helpers' as *;
+
+body{
+  @include fluid-text(18, 14);
+  overflow-x: hidden;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  background-color: var(--color-bg);
+  color: var(--color-light-35);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+    @include hover(){
+      color: var(--color-accent);
+    }
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  color: var(--color-light-10);
+  font-family: Roboto;
+}
+
+h1, .h1 {
+  @include fluid-text(100, 50);
+}
+
+h2, .h2 {
+  @include fluid-text(49, 41);
+}
+
+h3, .h3 {
+  @include fluid-text(40, 28);
+}
+
+h4, .h4 {
+  @include fluid-text(28, 18);
+}
+
+@keyframes smooth-bounce-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes smooth-bounce-x {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}

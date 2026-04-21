@@ -1,0 +1,17 @@
+.main-link{
+  width: 100%;
+  height: 100%;
+
+  &__title{
+    @include abs-center;
+    h1{
+      @include fluid-text(250, 75);
+      text-align: center;
+      color: var(--color-accent-lounge);
+      font-family: Manrope;
+      font-weight: 800;
+    }
+  }
+
+}
+

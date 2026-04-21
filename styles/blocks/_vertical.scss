@@ -1,0 +1,28 @@
+.vertical{
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-dark-40-5);
+  transform: translateX(-50%);
+
+  &:before, &:after{
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    content: '';
+    width: 1px;
+    height: 200%;
+    background-color: var(--color-dark-40-5);
+    transform: translateX(-50%);
+  }
+
+  &:before{
+    rotate: 45deg;
+  }
+  &:after{
+    rotate: -45deg;
+  }
+}

@@ -1,0 +1,80 @@
+@use 'sass:math';
+@use 'functions' as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min);
+}
+
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else  {
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+
+@mixin hover-bounce-y($duration: 0.5s, $easing: ease-in-out) {
+  &:hover {
+    animation: smooth-bounce-y $duration $easing;
+  }
+}
+
+@mixin hover-bounce-x($duration: 0.5s, $easing: ease-in-out) {
+  &:hover {
+    animation: smooth-bounce-x $duration $easing;
+  }
+}
+
+@mixin hover-bounce-x-i($duration: 1.5s, $easing: ease-in-out) {
+    animation: smooth-bounce-x $duration $easing infinite;
+}
+
+@mixin pseudo(){
+  content: '';
+  position: absolute;
+}

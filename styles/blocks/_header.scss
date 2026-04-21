@@ -1,0 +1,37 @@
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+
+  &__inner {
+    padding-top: rem(40);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--main{
+    top: auto;
+    bottom: rem(30) !important;
+
+    .logo__text{
+      color: var(--color-dark-40);
+
+      span{
+        color: var(--color-dark-40);
+      }
+    }
+  }
+  &--second{
+    .header__inner{
+      justify-content: flex-end;
+    }
+  }
+
+  &__content{
+    display: flex;
+    gap: rem(50);
+    align-items: center;
+  }
+}
+
