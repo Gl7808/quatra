@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="23ce7bf0-e5d2-452d-a413-2cd06634852e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/images/w1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/w2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/w3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/w4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/modules/game-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/modules/lenis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/modules/lounge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/modules/main-link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/modules/pin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_atmosphere.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_bento.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_block-title.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_box.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_gallery.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_game.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_link-animation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_lounge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_main-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_pin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_vertical.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cyber.html" beforeDir="false" afterPath="$PROJECT_DIR$/cyber.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hero.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/hero.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_burger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_burger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_scroll-indicator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_scroll-indicator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_social.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_social.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/atmosphere.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/bento.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/helpers/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/helpers/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="3AIK9vtDeohKPeebQPvdp5NR1Au" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/quattralounge/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\quattralounge\images" />
+      <recent name="D:\quattralounge\styles\blocks" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\quattralounge\scripts\modules" />
+      <recent name="D:\quattralounge\fonts" />
+      <recent name="D:\quattralounge\styles\blocks" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="sass-watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="sass-watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.sass-watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23ce7bf0-e5d2-452d-a413-2cd06634852e" name="Changes" comment="" />
+      <created>1772274496566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772274496566</updated>
+      <workItem from="1772274497609" duration="9864000" />
+      <workItem from="1772362318643" duration="4153000" />
+      <workItem from="1772375186412" duration="4104000" />
+      <workItem from="1772389982444" duration="6960000" />
+      <workItem from="1772473332993" duration="4281000" />
+      <workItem from="1772532942384" duration="19857000" />
+      <workItem from="1774727756650" duration="1087000" />
+      <workItem from="1776165074107" duration="6129000" />
+      <workItem from="1776267177088" duration="8169000" />
+      <workItem from="1776354869669" duration="34026000" />
+      <workItem from="1776547615029" duration="45411000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

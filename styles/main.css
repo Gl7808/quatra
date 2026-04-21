@@ -445,6 +445,10 @@ svg * {
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-size: clamp(0.875rem, 0.7944214876rem + 0.3305785124vw, 1.125rem);
   overflow-x: hidden;
