@@ -1708,15 +1708,27 @@ h4, .h4 {
 .faq {
   height: 80vh;
 }
+.faq__inner {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  align-items: flex-start;
+  gap: 3.125rem;
+}
+@media (width <= 47.99875rem) {
+  .faq__inner {
+    grid-template-columns: 1fr;
+  }
+}
 .faq__title {
   position: relative;
+  height: 100%;
 }
 .faq__title h2 {
-  font-size: 4.375rem;
+  font-size: 3.75rem;
   font-weight: 800;
   font-family: Roboto;
-  text-align: center;
   color: var(--color-dark-12);
+  line-height: 4rem;
 }
 @media (width <= 47.99875rem) {
   .faq__title h2 {
@@ -1733,7 +1745,7 @@ h4, .h4 {
 .faq__list {
   margin: 2.5rem auto 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
 }
 @media (width <= 47.99875rem) {
@@ -1743,7 +1755,7 @@ h4, .h4 {
 }
 
 .faq__item {
-  background: var(--color-dark-15);
+  background: var(--color-light-20);
   border: var(--border-def);
   overflow: hidden;
   transition: background var(--transition-duration);
@@ -1759,7 +1771,7 @@ h4, .h4 {
   padding: 1.25rem 1.5rem;
   background: transparent;
   border: none;
-  color: var(--color-light-10);
+  color: var(--color-dark-15);
   font-family: var(--font-family-accent);
   font-size: 1.125rem;
   font-weight: 500;
@@ -1825,6 +1837,15 @@ h4, .h4 {
 
 .faq__item.active .faq__answer {
   grid-template-rows: 1fr;
+  background-color: var(--color-dark-15);
+  padding-top: 1.25rem;
+  transition: 0.3s;
+}
+
+.faq__item.active .faq__question {
+  background-color: var(--color-dark-15);
+  color: var(--color-light-10);
+  transition: 0.3s;
 }
 
 .faq__answer-inner {
@@ -1902,6 +1923,140 @@ h4, .h4 {
 }
 .events__details {
   font-weight: 800;
+}
+
+.scheme__overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+.scheme__overlay::before, .scheme__overlay::after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 0%;
+  background-color: var(--color-dark-10);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+.scheme__overlay::before {
+  left: 0;
+  top: 0;
+}
+.scheme__overlay::after {
+  right: 0;
+  top: 50%;
+}
+.scheme__overlay.active {
+  pointer-events: auto;
+}
+.scheme__overlay.active::before, .scheme__overlay.active::after {
+  width: 100%;
+}
+.scheme__overlay__inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s 0.6s;
+}
+.scheme__overlay.active .scheme__overlay__inner {
+  opacity: 1;
+}
+.scheme__overlay__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  z-index: 3;
+  background-color: var(--color-light-10);
+  color: var(--color-dark-10);
+}
+@media (width <= 47.99875rem) {
+  .scheme__overlay__close {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-light-10);
+    color: var(--color-dark-10);
+  }
+}
+.scheme__overlay__close:hover {
+  background: var(--color-light-10);
+  border-color: var(--color-light-10);
+}
+.scheme__overlay__content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.scheme__image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+}
+
+.scheme-description {
+  z-index: 3;
+  position: absolute;
+  background-color: var(--color-light-10);
+  padding: 0.625rem 1.25rem;
+  top: 1.25rem;
+  left: 1.25rem;
+}
+@media (width <= 47.99875rem) {
+  .scheme-description {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.page-transition__overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+.page-transition__overlay::before, .page-transition__overlay::after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 0%;
+  background-color: var(--color-dark-10);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+.page-transition__overlay::before {
+  left: 0;
+  top: 0;
+}
+.page-transition__overlay::after {
+  right: 0;
+  top: 50%;
+}
+.page-transition__overlay.active {
+  pointer-events: auto;
+}
+.page-transition__overlay.active::before, .page-transition__overlay.active::after {
+  width: 100%;
+}
+.page-transition__overlay__inner {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s 0.6s;
+}
+.page-transition__overlay.active .page-transition__overlay__inner {
+  opacity: 1;
 }
 
 .tournament {
@@ -2136,7 +2291,11 @@ h4, .h4 {
 }
 
 .footer {
-  min-height: 50dvh;
+  background-color: var(--color-dark-10);
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /*# sourceMappingURL=main.css.map */

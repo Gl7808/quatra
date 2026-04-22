@@ -1,7 +1,9 @@
 .footer{
-  min-height: 50dvh;
+  background-color: var(--color-dark-10);
+
 
   &__inner{
-
+   display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

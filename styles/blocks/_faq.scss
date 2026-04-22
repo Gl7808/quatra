@@ -1,18 +1,26 @@
 .faq{
   height: 80vh;
   &__inner{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    align-items: flex-start;
+    gap: rem(50);
 
+    @include mobile{
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title{
     position: relative;
+    height: 100%;
+
     h2{
-      font-size: rem(70);
+      font-size: rem(60);
       font-weight: 800;
       font-family: Roboto;
-      text-align: center;
       color: var(--color-dark-12);
-
+      line-height: 4rem;
       @include mobile{
         font-size: rem(50);
       }
@@ -36,7 +44,7 @@
 .faq__list {
   margin: 2.5rem auto 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
 
   @include mobile{
@@ -45,7 +53,7 @@
 }
 
 .faq__item {
-  background: var(--color-dark-15);
+  background: var(--color-light-20);
   border: var(--border-def);
   overflow: hidden;
   transition: background var(--transition-duration);
@@ -62,7 +70,7 @@
   padding: 1.25rem 1.5rem;
   background: transparent;
   border: none;
-  color: var(--color-light-10);
+  color: var(--color-dark-15);
   font-family: var(--font-family-accent);
   font-size: 1.125rem;
   font-weight: 500;
@@ -114,6 +122,15 @@
 
 .faq__item.active .faq__answer {
   grid-template-rows: 1fr;
+  background-color: var(--color-dark-15);
+  padding-top: rem(20);
+  transition: .3s;
+}
+
+.faq__item.active .faq__question{
+  background-color: var(--color-dark-15);
+  color: var(--color-light-10);
+  transition: .3s;
 }
 
 .faq__answer-inner {
