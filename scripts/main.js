@@ -10,6 +10,8 @@ import './modules/lenis.js';
 import './modules/atmosphere.js';
 import './modules/bento.js';
 import './modules/lounge.js';
+import './modules/faq.js';
+import './modules/kitchen.js';
 import './modules/game-list.js';
 
 

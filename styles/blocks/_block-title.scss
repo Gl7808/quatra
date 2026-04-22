@@ -5,6 +5,11 @@
     gap: rem(100);
     align-items: center;
 
+  &--dark{
+    h2{
+      color: var(--color-dark-15);
+    }
+  }
   &--2{
     grid-template-columns: 1fr;
     gap: rem(10);

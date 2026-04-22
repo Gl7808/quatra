@@ -32,3 +32,25 @@
     }
   }
 }
+
+.link__button{
+  font-size: rem(15);
+  border: none;
+  padding: 0;
+  position: relative;
+  margin-top: rem(20);
+
+  &--dark{
+    color: var(--color-dark-15);
+  }
+
+  &:after{
+    @include pseudo;
+    content: '🡭';
+    right: rem(-80);
+    top: 50%;
+    translate: -50% -50%;
+    padding: rem(15);
+    aspect-ratio: 1;
+  }
+}
