@@ -11,6 +11,7 @@ import './modules/lenis.js';
 import './modules/atmosphere.js';
 import './modules/link_animation.js';
 import './modules/bento.js';
+import './modules/hardware.js';
 import './modules/lounge.js';
 import './modules/faq.js';
 import './modules/kitchen.js';

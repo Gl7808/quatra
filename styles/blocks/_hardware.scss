@@ -1,0 +1,148 @@
+// === Оверлей hardware (левая панель) ===
+.hardware__overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+
+  // Анимация: шторка слева на 50% экрана
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--color-dark-10);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+
+  &.active {
+    pointer-events: auto;
+
+    &::before {
+      width: 50%; // только левая половина
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition:
+            opacity 0.3s 0.2s,
+            transform 0.3s 0.2s;
+    padding: rem(40);
+    display: flex;
+    flex-direction: column;
+    color: var(--color-light-10);
+  }
+
+  &.active &__inner {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__close {
+    align-self: flex-end;
+    margin-bottom: rem(20);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+    background-color: var(--color-light-10);
+    color: var(--color-dark-10);
+    margin-top: rem(40);
+
+    &:hover {
+      background: var(--color-light-10);
+      border-color: var(--color-light-10);
+      color: var(--color-dark-10);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+
+    // Скроллбар для темной темы
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-accent-game);
+      border-radius: 3px;
+    }
+  }
+}
+
+// Адаптив: на мобильных — на весь экран
+@include mobile {
+  .hardware__overlay {
+    &::before {
+      width: 0%;
+    }
+
+    &.active::before {
+      width: 100%;
+    }
+
+    &__inner {
+      width: 100%;
+      padding: rem(20);
+    }
+  }
+}
+
+
+
+.hardware{
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+  &__item{
+    display: grid;
+    grid-template-columns: rem(40) auto 1fr;
+    gap: rem(10);
+    align-items: center;
+    padding: rem(20);
+    background-color: var(--color-dark-12);
+    &:hover{
+      background-color: var(--color-dark-15);
+    }
+  }
+  &__number{
+    color: var(--color-accent-lounge);
+    font-weight: 800;
+    font-family: Roboto;
+    padding: rem(5);
+    border: var(--border-def);
+    @include flex-center();
+  }
+  &__type{
+    color: var(--color-light-40);
+  }
+  &__text{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__title{
+    font-size: rem(50);
+    padding: rem(10);
+
+    @include mobile{
+      font-size: rem(25);
+    }
+  }
+}

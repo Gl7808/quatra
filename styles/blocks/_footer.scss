@@ -5,5 +5,26 @@
   &__inner{
    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
   }
+}
+
+.author{
+  text-align: center;
+  @include flex-center();
+  gap: rem(10);
+  font-size: rem(14);
+  height: rem(80);
+  a{
+    color: var(--color-accent-lounge);
+    font-weight: 800;
+  }
+}
+
+.copy{
+  height: rem(80);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: rem(14);
 }

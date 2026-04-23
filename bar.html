@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quattra | Барная карта</title>
+  <style>
+    :root {
+      --bg-main: #0f0f0f;
+      --bg-card: #1a1a1a;
+      --bg-hero: #0a0a0a;
+      --text-main: #ffffff;
+      --text-muted: #a0a0a0;
+      --line: #2a2a2a;
+      --line-hover: #404040;
+      --accent: #ffffff;
+      --font-main: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 6rem;
+      --max-width: 1400px;
+      --nav-height: 60px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-main);
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg-hero);
+      color: #fff;
+      text-align: center;
+      padding: var(--spacing-md);
+      position: relative;
+      background-image: radial-gradient(ellipse at center, #1f2e1a 0%, var(--bg-hero) 70%);
+    }
+    .hero__brand {
+      font-size: 0.9rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      margin-bottom: var(--spacing-sm);
+      opacity: 0.6;
+    }
+    .hero__title {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 200;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: var(--spacing-sm);
+    }
+    .hero__subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      max-width: 600px;
+      opacity: 0.8;
+      margin-bottom: var(--spacing-md);
+    }
+    .hero__cta {
+      display: inline-block;
+      padding: 0.8rem 2.2rem;
+      border: 1px solid var(--accent);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+    }
+    .hero__cta:hover { background: var(--accent); color: var(--bg-hero); }
+    .hero__scroll {
+      position: absolute;
+      bottom: var(--spacing-md);
+      opacity: 0.4;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* STICKY NAV */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 15, 15, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      z-index: 100;
+      padding: 0;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+    }
+    .sticky-nav__inner {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-xs);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .sticky-nav__inner::-webkit-scrollbar { display: none; }
+
+    .sticky-nav__link {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .sticky-nav__link:hover, .sticky-nav__link.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* MENU CONTAINER */
+    .menu-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
+    }
+    .menu__header {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    .menu__title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .menu__divider {
+      width: 40px;
+      height: 1px;
+      background: var(--text-main);
+      margin: var(--spacing-sm) auto 0;
+    }
+
+    /* GRID LAYOUT */
+    .menu__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+    }
+
+    /* SECTIONS */
+    .menu__section {
+      scroll-margin-top: calc(var(--nav-height) + 20px);
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      padding: var(--spacing-md);
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeIn 0.5s ease forwards;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .menu__section:hover {
+      box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+      border-color: var(--line-hover);
+    }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+    .menu__section-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding-bottom: var(--spacing-xs);
+      border-bottom: 1px solid var(--text-main);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .menu__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: var(--spacing-sm);
+      margin-bottom: var(--spacing-sm);
+      border-bottom: 1px solid var(--line);
+    }
+    .menu__item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .menu__item-info { flex: 1; padding-right: var(--spacing-sm); }
+    .menu__item-name-row { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+    .menu__item-name { font-weight: 500; font-size: 1rem; letter-spacing: 0.01em; }
+    .menu__item-weight { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; }
+    .menu__item-desc { font-size: 0.85rem; color: var(--text-muted); font-weight: 300; margin-top: 3px; }
+    .menu__item-price { font-weight: 500; white-space: nowrap; font-size: 0.95rem; }
+
+    /* QUICK NAV SIDE */
+    .quick-nav {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      z-index: 50;
+    }
+    .quick-nav__link {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      opacity: 0.5;
+      transition: opacity 0.3s, color 0.3s;
+      position: relative;
+      cursor: pointer;
+    }
+    .quick-nav__link::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border: 1px solid var(--text-muted);
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+    .quick-nav__link.active, .quick-nav__link:hover {
+      opacity: 1;
+      color: var(--text-main);
+    }
+    .quick-nav__link.active::before, .quick-nav__link:hover::before {
+      background: var(--text-main);
+      border-color: var(--text-main);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: var(--spacing-md);
+      font-size: 0.75rem;
+      opacity: 0.5;
+      border-top: 1px solid var(--line);
+      margin-top: var(--spacing-xl);
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 1024px) {
+      .menu__grid { grid-template-columns: 1fr; }
+      .quick-nav { display: none; }
+    }
+    @media (max-width: 600px) {
+      .sticky-nav__link { font-size: 0.75rem; padding: 0.4rem 0.6rem; }
+      .menu__item { flex-direction: column; gap: 0.2rem; }
+      .menu__item-price { align-self: flex-start; opacity: 0.9; }
+      :root { --nav-height: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero__brand">Quattra</div>
+  <h1 class="hero__title">Барная карта</h1>
+  <p class="hero__subtitle">Авторские коктейли, крафтовое пиво и изысканные напитки.</p>
+  <a href="#menu" class="hero__cta">Меню</a>
+  <span class="hero__scroll">↓</span>
+</section>
+
+<nav class="sticky-nav" id="stickyNav"></nav>
+<nav class="quick-nav" id="quickNav"></nav>
+
+<main class="menu-wrapper" id="menu">
+  <header class="menu__header">
+    <h2 class="menu__title">Барная карта</h2>
+    <div class="menu__divider"></div>
+  </header>
+  <div class="menu__grid" id="menuGrid"></div>
+</main>
+
+<footer>
+  © 2026 Quattra. Все права защищены.
+</footer>
+
+<script>
+  const MENU_DATA = {
+    "Авторские коктейли": [
+      { name: "Quattro Sour", volume: "180 мл", desc: "Джин, лимон, сироп бузины, яичный белок, биттер", price: "750 ₽" },
+      { name: "Midnight in Moscow", volume: "160 мл", desc: "Водка, чёрная смородина, вермут, лайм, мята", price: "680 ₽" },
+      { name: "Smoked Old Fashioned", volume: "140 мл", desc: "Бурбон, кленовый сироп, биттер, дым яблони", price: "890 ₽" },
+      { name: "Yuzu Spritz", volume: "220 мл", desc: "Апероль, просекко, юзу, содовая, розмарин", price: "720 ₽" },
+      { name: "Spiced Pear Martini", volume: "150 мл", desc: "Водка, ликёр груша, пряный сироп, лимон", price: "790 ₽" },
+      { name: "Basil Gimlet", volume: "160 мл", desc: "Джин, лайм, сироп базилика, огурец", price: "710 ₽" },
+      { name: "Coffee Negroni", volume: "140 мл", desc: "Джин, кампари, вермут, холодный эспрессо", price: "760 ₽" },
+      { name: "Berry Mojito", volume: "240 мл", desc: "Ром, ежевика, малина, лайм, мята, содовая", price: "650 ₽" }
+    ],
+    "Классические коктейли": [
+      { name: "Margarita", volume: "160 мл", desc: "Текила, трипл сек, лайм, соль", price: "620 ₽" },
+      { name: "Mojito", volume: "240 мл", desc: "Ром, лайм, мята, сахар, содовая", price: "590 ₽" },
+      { name: "Espresso Martini", volume: "140 мл", desc: "Водка, кофейный ликёр, эспрессо, сироп", price: "680 ₽" },
+      { name: "Moscow Mule", volume: "220 мл", desc: "Водка, имбирный эль, лайм, имбирь", price: "580 ₽" },
+      { name: "Whiskey Sour", volume: "160 мл", desc: "Бурбон, лимон, сахар, яичный белок", price: "610 ₽" },
+      { name: "Cosmopolitan", volume: "150 мл", desc: "Водка, трипл сек, клюква, лайм", price: "630 ₽" },
+      { name: "Piña Colada", volume: "200 мл", desc: "Ром, кокос, ананас, сливки", price: "640 ₽" },
+      { name: "Long Island Iced Tea", volume: "240 мл", desc: "Водка, ром, джин, текила, кола, лимон", price: "720 ₽" }
+    ],
+    "Пиво": [
+      { name: "IPA Craft", volume: "0.4 / 0.5 л", desc: "Цитрусовые ноты, хмельная горчинка, 6.2%", price: "420 / 520 ₽" },
+      { name: "Pilsner Premium", volume: "0.4 / 0.5 л", desc: "Лёгкий, освежающий, золотистый, 4.8%", price: "380 / 470 ₽" },
+      { name: "Stout Dark", volume: "0.33 / 0.5 л", desc: "Кофе, шоколад, карамель, плотный, 5.5%", price: "450 / 620 ₽" },
+      { name: "Wheat Beer", volume: "0.4 / 0.5 л", desc: "Банан, гвоздика, мягкий, нефильтрованный, 5.1%", price: "400 / 490 ₽" },
+      { name: "Sour Ale", volume: "0.33 л", desc: "Вишня, малина, лёгкая кислинка, 4.5%", price: "520 ₽" },
+      { name: "Lager Classic", volume: "0.4 / 0.5 л", desc: "Чистый вкус, умеренная горечь, 4.6%", price: "350 / 430 ₽" },
+      { name: "Belgian Tripel", volume: "0.33 л", desc: "Пряности, фрукты, крепкий, 8.5%", price: "580 ₽" },
+      { name: "Ginger Beer (безалк.)", volume: "0.33 л", desc: "Имбирь, лайм, пряный, освежающий", price: "380 ₽" }
+    ],
+    "Вино (бокал / бутылка)": [
+      { name: "Sauvignon Blanc", volume: "150 мл / 750 мл", desc: "Новая Зеландия, цитрус, зелень, свежее", price: "550 / 2 900 ₽" },
+      { name: "Chardonnay", volume: "150 мл / 750 мл", desc: "Франция, дуб, ваниль, сливочное", price: "620 / 3 400 ₽" },
+      { name: "Rosé Provence", volume: "150 мл / 750 мл", desc: "Франция, клубника, минеральность", price: "590 / 3 200 ₽" },
+      { name: "Pinot Noir", volume: "150 мл / 750 мл", desc: "Германия, вишня, специи, лёгкое", price: "640 / 3 600 ₽" },
+      { name: "Cabernet Sauvignon", volume: "150 мл / 750 мл", desc: "Чили, чёрная смородина, дуб, плотное", price: "580 / 3 100 ₽" },
+      { name: "Prosecco DOC", volume: "150 мл / 750 мл", desc: "Италия, яблоко, цветы, игристое", price: "520 / 2 800 ₽" },
+      { name: "Malbec", volume: "150 мл / 750 мл", desc: "Аргентина, слива, шоколад, бархатное", price: "610 / 3 300 ₽" }
+    ],
+    "Крепкие напитки": [
+      { name: "Водка Premium", volume: "50 мл", desc: "Россия, тройная фильтрация", price: "320 ₽" },
+      { name: "Джин London Dry", volume: "50 мл", desc: "Англия, можжевельник, цитрус", price: "380 ₽" },
+      { name: "Ром White / Dark", volume: "50 мл", desc: "Карибы, сахарный тростник", price: "360 ₽" },
+      { name: "Текила Silver / Reposado", volume: "50 мл", desc: "Мексика, 100% агава", price: "420 ₽" },
+      { name: "Виски Bourbon", volume: "50 мл", desc: "США, кукуруза, ваниль, карамель", price: "450 ₽" },
+      { name: "Виски Single Malt", volume: "50 мл", desc: "Шотландия, выдержка 12 лет", price: "620 ₽" },
+      { name: "Коньяк VSOP", volume: "50 мл", desc: "Франция, выдержка 4 года", price: "580 ₽" },
+      { name: "Ликёры (выбор)", volume: "40 мл", desc: "Amaretto, Baileys, Triple Sec, Limoncello", price: "340 ₽" }
+    ],
+    "Безалкогольные напитки": [
+      { name: "Лимонад огурец-базилик", volume: "400 мл", desc: "Свежий огурец, базилик, лайм, газировка", price: "380 ₽" },
+      { name: "Лимонад лайм-имбирь", volume: "400 мл", desc: "Свежий имбирь, лайм, мята, мёд", price: "380 ₽" },
+      { name: "Ягодный морс", volume: "350 мл", desc: "Клюква, брусника, малина, мята", price: "320 ₽" },
+      { name: "Свежевыжатый сок", volume: "300 мл", desc: "Апельсин / яблоко / морковь / микс", price: "450 ₽" },
+      { name: "Smoothie", volume: "300 мл", desc: "Манго-маракуйя или ягоды-банан", price: "420 ₽" },
+      { name: "Минеральная вода", volume: "750 мл", desc: "San Pellegrino / Acqua Panna", price: "450 ₽" },
+      { name: "Тоник / Сода / Кола", volume: "250 мл", desc: "Fever-Tree / Soda Stream / Coca-Cola", price: "280 ₽" },
+      { name: "Ice Tea", volume: "400 мл", desc: "Персик / лимон / мята, холодный", price: "340 ₽" }
+    ],
+    "Чай / Кофе": [
+      { name: "Эспрессо", volume: "30 мл", desc: "Зёрна specialty, Италия", price: "250 ₽" },
+      { name: "Американо", volume: "200 мл", desc: "Эспрессо + вода", price: "300 ₽" },
+      { name: "Капучино / Латте", volume: "250 мл", desc: "Эспрессо, молоко 3.2%, пенка", price: "380 ₽" },
+      { name: "Раф", volume: "250 мл", desc: "Эспрессо, сливки, ванильный сироп", price: "420 ₽" },
+      { name: "Cold Brew", volume: "300 мл", desc: "Холодная экстракция 12 часов, лёд", price: "390 ₽" },
+      { name: "Чай листовой", volume: "350 мл", desc: "Чёрный / зелёный / улун / травяной", price: "320 ₽" },
+      { name: "Чайная церемония", volume: "450 мл", desc: "Молочный улун или пуэр, пролив", price: "520 ₽" },
+      { name: "Глинтвейн (сезонно)", volume: "200 мл", desc: "Красное вино, специи, апельсин, мёд", price: "450 ₽" }
+    ]
+  };
+
+  const slugify = text => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
+  const categories = Object.keys(MENU_DATA);
+
+  function renderMenu() {
+    const grid = document.getElementById('menuGrid');
+    const stickyNav = document.getElementById('stickyNav');
+    const quickNav = document.getElementById('quickNav');
+
+    const navInner = document.createElement('nav');
+    navInner.className = 'sticky-nav__inner';
+    stickyNav.appendChild(navInner);
+
+    categories.forEach((cat, index) => {
+      const id = slugify(cat);
+
+      const section = document.createElement('section');
+      section.id = id;
+      section.className = 'menu__section';
+      section.style.animationDelay = `${index * 0.08}s`;
+
+      const itemsHTML = MENU_DATA[cat].map(item => `
+        <div class="menu__item">
+          <div class="menu__item-info">
+            <div class="menu__item-name-row">
+              <span class="menu__item-name">${item.name}</span>
+              <span class="menu__item-weight">${item.volume}</span>
+            </div>
+            <span class="menu__item-desc">${item.desc}</span>
+          </div>
+          <span class="menu__item-price">${item.price}</span>
+        </div>
+      `).join('');
+
+      section.innerHTML = `
+        <h3 class="menu__section-title">${cat}</h3>
+        <div class="menu__items">${itemsHTML}</div>
+      `;
+      grid.appendChild(section);
+
+      const navLink = document.createElement('a');
+      navLink.href = `#${id}`;
+      navLink.className = 'sticky-nav__link';
+      navLink.dataset.target = id;
+      navLink.textContent = cat;
+      navInner.appendChild(navLink);
+
+      const quickLink = document.createElement('a');
+      quickLink.href = `#${id}`;
+      quickLink.className = 'quick-nav__link';
+      quickLink.dataset.target = id;
+      quickLink.textContent = cat;
+      quickNav.appendChild(quickLink);
+    });
+
+    initScrollObserver();
+  }
+
+  function initScrollObserver() {
+    const sections = document.querySelectorAll('.menu__section');
+    const navLinks = document.querySelectorAll('[data-target]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.target === activeId);
+          });
+        }
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '-80px 0px -60% 0px'
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
+
+  document.addEventListener('DOMContentLoaded', renderMenu);
+</script>
+</body>
+</html>

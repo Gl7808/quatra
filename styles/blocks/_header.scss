@@ -13,6 +13,13 @@
   &--main{
     top: auto;
     bottom: rem(30) !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+
+    &.is-hidden {
+      transform: translateY(120%);
+      opacity: 0;
+      pointer-events: none;
+    }
 
     .logo__text{
       color: var(--color-dark-40);

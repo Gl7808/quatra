@@ -10,12 +10,108 @@
   <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
-  <header class="header" id="header">
-    <div class="header__inner"></div>
-  </header>
+<header class="header header--main">
+  <div class="header__inner container">
+    <div class="logo">
+      <p class="logo__text"></p>
+    </div>
+    <div class="header__content">
+      <nav class="nav hidden-mobile">
+        <ul class="nav__list nav__list--main">
+          <li class="nav__item nav__item--main">
+            <a href="#" class="nav__link">
+              index
+            </a>
+          </li>
+          <li class="nav__item nav__item--main">
+            <a href="#" class="nav__link">
+              about
+            </a>
+          </li>
+          <li class="nav__item nav__item--main">
+            <a href="#" class="nav__link">
+              zone
+            </a>
+          </li>
+          <li class="nav__item nav__item--main">
+            <a href="#" class="nav__link">
+              event
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 
 
+  <div class="sidebar">
+    <div class="sidebar__inner">
 
+      <!-- Кнопка закрытия внутри сайдбара -->
+      <button class="burger burger2" aria-label="Закрыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sidebar__content">
+        <div class="sidebar__nav">
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="/index.html" class="sidebar__link">INDEX</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="/cyber.html" class="sidebar__link">CYBERCLUB</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="/food.html" class="sidebar__link">KITCHEN</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="/lounge.html" class="sidebar__link">LOUNGE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar__title">
+          <a href="">
+            <p>Quattra</p>
+          </a>
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4493 5.94799C23.6161 5.40154 23.4493 5 22.6553 5H20.0297C19.3621 5 19.0543 5.34687 18.8874 5.72936C18.8874 5.72936 17.5521 8.92607 15.6606 11.0025C15.0487 11.6036 14.7705 11.7949 14.4367 11.7949C14.2698 11.7949 14.0194 11.6036 14.0194 11.0572V5.94799C14.0194 5.29225 13.8345 5 13.2781 5H9.15213C8.73494 5 8.48403 5.30434 8.48403 5.59278C8.48403 6.21441 9.42974 6.35777 9.52722 8.10641V11.9042C9.52722 12.7368 9.37413 12.8878 9.04032 12.8878C8.15023 12.8878 5.98507 9.67682 4.70093 6.00261C4.44927 5.28847 4.19686 5 3.52583 5H0.900218C0.150044 5 0 5.34687 0 5.72936C0 6.41244 0.890141 9.80039 4.14464 14.2812C6.31429 17.3412 9.37118 19 12.1528 19C13.8218 19 14.0283 18.6316 14.0283 17.997V15.6842C14.0283 14.9474 14.1864 14.8003 14.7149 14.8003C15.1043 14.8003 15.7719 14.9916 17.3296 16.467C19.1099 18.2156 19.4034 19 20.4047 19H23.0304C23.7805 19 24.1556 18.6316 23.9392 17.9045C23.7024 17.1799 22.8525 16.1286 21.7247 14.8823C21.1127 14.1719 20.1947 13.4069 19.9165 13.0243C19.5271 12.5326 19.6384 12.314 19.9165 11.8769C19.9165 11.8769 23.1155 7.45067 23.4493 5.94799Z" fill="#000000"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.265 3 3 6.236v13.223h4.502V21l2.531.85 2.392-2.391h3.658l4.923-4.924V3H4.265zm15.052 10.691-2.813 2.814h-4.502l-2.391 2.391v-2.391H5.813V4.688h13.504v9.003zm-2.812-5.767v4.923h-1.688V7.924h1.688zm-4.502 0v4.923h-1.688V7.924h1.688z"/></svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                  <path d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"/>
+                </svg> </a>
+            </li>
+          </ul>
+          <div class="phone">
+            <p class="phone__number" >+7 931-080-22-42</p>
+            <p class="phone__number">+7 931-080-22-43</p>
+            <p class="phone__address">Ул.Строителей д.42</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 </html>

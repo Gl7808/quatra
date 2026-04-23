@@ -165,12 +165,12 @@
     .menu__section {
       scroll-margin-top: calc(var(--nav-height) + 20px); /* Точный отступ под меню */
       background: #fff;
-      border: 1px solid var(--line);
       padding: var(--spacing-md);
       opacity: 0;
       transform: translateY(15px);
       animation: fadeIn 0.5s ease forwards;
       transition: box-shadow 0.3s ease;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
     }
     .menu__section:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
     @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
@@ -274,7 +274,7 @@
 
 <section class="hero">
   <div class="hero__brand">Quattra</div>
-  <h1 class="hero__title">Ресторан</h1>
+  <h1 class="hero__title">Кухня</h1>
   <p class="hero__subtitle">Монохромная эстетика, авторская подача и акцент на чистоте вкуса. Пространство для тех, кто ценит детали.</p>
   <a href="#menu" class="hero__cta">Меню</a>
   <span class="hero__scroll">↓</span>
