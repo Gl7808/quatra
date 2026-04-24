@@ -1953,6 +1953,16 @@ h4, .h4 {
   z-index: 100;
   touch-action: none;
 }
+@media (width <= 63.99875rem) {
+  .scheme__overlay {
+    display: none;
+  }
+}
+@media (width <= 47.99875rem) {
+  .scheme__overlay {
+    display: none;
+  }
+}
 .scheme__overlay::before, .scheme__overlay::after {
   position: absolute;
   content: "";

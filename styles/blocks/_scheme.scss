@@ -5,6 +5,13 @@
   pointer-events: none;
   z-index: 100;
   touch-action: none;
+
+  @include tablet{
+    display: none;
+  }
+  @include mobile{
+    display: none;
+  }
   &::before, &::after {
     position: absolute;
     content: '';
