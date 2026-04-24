@@ -3,6 +3,7 @@
   width: 100%;
   top: 0;
   z-index: 2;
+  touch-action: none;
 
   &__inner {
     padding-top: rem(40);
