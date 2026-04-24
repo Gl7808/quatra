@@ -1951,6 +1951,7 @@ h4, .h4 {
   inset: 0;
   pointer-events: none;
   z-index: 100;
+  touch-action: none;
 }
 .scheme__overlay::before, .scheme__overlay::after {
   position: absolute;
