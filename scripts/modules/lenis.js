@@ -2,12 +2,7 @@
 const lenis = new Lenis({
     duration: 1,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    touchMultiplier: 2,
-    prevent: (node) => {
-        if (window.innerWidth <= 768) return true;
-        return false;
-    }
+    smooth: true
 });
 
 function raf(time) {

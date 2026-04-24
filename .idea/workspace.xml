@@ -74,8 +74,6 @@
       <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/atmosphere.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/bento.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/helpers/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/helpers/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
@@ -173,7 +171,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="84467000" />
+      <workItem from="1776547615029" duration="84690000" />
     </task>
     <servers />
   </component>
