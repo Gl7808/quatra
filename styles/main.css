@@ -957,7 +957,6 @@ h4, .h4 {
   height: 100dvh;
   pointer-events: none;
   z-index: 90;
-  touch-action: none;
 }
 @media (width <= 47.99875rem) {
   .sidebar {
@@ -1247,7 +1246,6 @@ h4, .h4 {
   inset: 0;
   pointer-events: none;
   z-index: 100;
-  touch-action: none;
 }
 .map-overlay::before, .map-overlay::after {
   position: absolute;
@@ -1950,7 +1948,6 @@ h4, .h4 {
   position: fixed;
   inset: 0;
   z-index: 100;
-  touch-action: none;
   pointer-events: none;
 }
 @media (width <= 63.99875rem) {
@@ -2152,6 +2149,8 @@ h4, .h4 {
 .hardware__overlay__content {
   flex: 1;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .hardware__overlay__content::-webkit-scrollbar {
   width: 6px;

@@ -69,6 +69,8 @@
   &__content {
     flex: 1;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 
     // Скроллбар для темной темы
     &::-webkit-scrollbar {

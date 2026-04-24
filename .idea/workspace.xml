@@ -36,7 +36,6 @@
       <change afterPath="$PROJECT_DIR$/styles/blocks/_contact.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_events.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_game.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/blocks/_hardware.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_kitchen.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_link-animation.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_main-link.scss" afterDir="false" />
@@ -62,6 +61,7 @@
       <change beforePath="$PROJECT_DIR$/styles/blocks/_faq.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_faq.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_gallery.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_hardware.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_hardware.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_hero.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_lounge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_lounge.scss" afterDir="false" />
@@ -173,7 +173,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="85930000" />
+      <workItem from="1776547615029" duration="87319000" />
     </task>
     <servers />
   </component>
