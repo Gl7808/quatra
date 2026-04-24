@@ -1949,9 +1949,9 @@ h4, .h4 {
 .scheme__overlay {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 100;
   touch-action: none;
+  pointer-events: none;
 }
 @media (width <= 63.99875rem) {
   .scheme__overlay {
@@ -3152,6 +3152,9 @@ h4, .h4 {
     padding: 0.625rem 0.9375rem;
     font-size: 0.75rem;
   }
+}
+.gallery {
+  pointer-events: none;
 }
 .gallery__list {
   display: grid;

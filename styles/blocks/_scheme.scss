@@ -2,10 +2,10 @@
 .scheme__overlay {
   position: fixed;
   inset: 0;
-  pointer-events: none;
+
   z-index: 100;
   touch-action: none;
-
+  pointer-events: none;
   @include tablet{
     display: none;
   }
