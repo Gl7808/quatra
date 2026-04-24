@@ -24,7 +24,6 @@
       <change afterPath="$PROJECT_DIR$/scripts/modules/game-list.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/hardware.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/kitchen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/modules/lenis.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/link_animation.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/lounge.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/main-link.js" afterDir="false" />
@@ -55,6 +54,7 @@
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/modules/header-cyber.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/header-cyber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/modules/lenis.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/lenis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_atmosphere.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_atmosphere.scss" afterDir="false" />
@@ -171,7 +171,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="82977000" />
+      <workItem from="1776547615029" duration="83347000" />
     </task>
     <servers />
   </component>

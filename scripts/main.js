@@ -15,8 +15,6 @@ import './modules/hardware.js';
 import './modules/lounge.js';
 import './modules/faq.js';
 import './modules/kitchen.js';
-import './modules/menu.js';
-import './modules/bar.js';
 import './modules/game-list.js';
 
 
