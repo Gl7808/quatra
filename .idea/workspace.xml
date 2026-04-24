@@ -68,6 +68,7 @@
       <change beforePath="$PROJECT_DIR$/styles/blocks/_lounge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_lounge.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_nav.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_scroll-indicator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_scroll-indicator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/_social.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/blocks/_social.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/atmosphere.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/bento.js" afterDir="false" />
@@ -171,7 +172,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="83347000" />
+      <workItem from="1776547615029" duration="83662000" />
     </task>
     <servers />
   </component>

@@ -522,6 +522,14 @@ h4, .h4 {
     transform: translateX(-4px);
   }
 }
+.overlay {
+  pointer-events: none;
+}
+
+.overlay.active {
+  pointer-events: auto;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -945,7 +953,7 @@ h4, .h4 {
   top: 0;
   width: 35vw;
   min-width: 25rem;
-  height: 100vh;
+  height: 100dvh;
   pointer-events: none;
   z-index: 90;
 }
