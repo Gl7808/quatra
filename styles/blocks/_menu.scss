@@ -157,6 +157,7 @@
   @include mobile {
     max-height: none;
     overflow-y: visible;
+    grid-template-columns: 1fr;
   }
 
   /* Скроллбар */

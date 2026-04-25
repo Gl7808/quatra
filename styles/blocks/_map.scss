@@ -14,6 +14,8 @@
   pointer-events: none;
   z-index: 100;
 
+
+
   // Две половинки для анимации
   &::before, &::after {
     position: absolute;
@@ -121,4 +123,9 @@
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+
+.map{
+  max-height: 600px;
 }

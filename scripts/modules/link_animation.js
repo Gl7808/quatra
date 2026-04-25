@@ -1,32 +1,47 @@
-// === Анимация перехода по ссылкам ===
 const transitionOverlay = document.querySelector('.page-transition__overlay');
-const transitionDuration = 400; // длительность анимации в мс (должна совпадать с CSS)
+const TRANSITION_DURATION = 400;
+const INNER_OPACITY_DURATION = 300;
+const TRANSITION_FLAG = 'pageTransitionInFlight';
 
-const animateTransition = (callback) => {
-    if (!transitionOverlay) {
-        callback?.();
-        return;
-    }
+// === Исходящий переход (клик по ссылке) ===
+const animateOutgoing = (callback) => {
+    if (!transitionOverlay) { callback?.(); return; }
 
-    // Показываем оверлей
     transitionOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Ждём завершения анимации и выполняем переход
     setTimeout(() => {
+        sessionStorage.setItem(TRANSITION_FLAG, '1');
         callback?.();
-    }, transitionDuration);
+    }, TRANSITION_DURATION);
 };
 
-// Перехват кликов по ссылкам
+// === Входящий переход (загрузка страницы) ===
+const animateIncoming = () => {
+    if (!sessionStorage.getItem(TRANSITION_FLAG) || !transitionOverlay) return;
+
+    sessionStorage.removeItem(TRANSITION_FLAG);
+
+    // 1. Мгновенно устанавливаем конечное состояние
+    transitionOverlay.classList.add('no-transition', 'active');
+    document.body.style.overflow = 'hidden';
+
+    // 2. Force reflow
+    void transitionOverlay.offsetWidth;
+
+    // 3. Включаем транзишены и запускаем обратную анимацию
+    transitionOverlay.classList.remove('no-transition');
+    transitionOverlay.classList.remove('active');
+
+    // 4. Cleanup после завершения всех анимаций
+    setTimeout(() => {
+        document.body.style.overflow = '';
+    }, TRANSITION_DURATION + INNER_OPACITY_DURATION);
+};
+
+// === Обработчики ===
 document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href]');
-
-    // Пропускаем, если:
-    // - нет ссылки
-    // - внешняя ссылка (_blank или другой домен)
-    // - якорь на той же странице
-    // - ссылка с классом no-transition
     if (!link) return;
     if (link.target === '_blank') return;
     if (link.hostname !== window.location.hostname) return;
@@ -34,18 +49,17 @@ document.addEventListener('click', (e) => {
     if (link.classList.contains('no-transition')) return;
 
     e.preventDefault();
-
-    const href = link.href;
-
-    animateTransition(() => {
-        window.location.href = href;
+    animateOutgoing(() => {
+        window.location.href = link.href;
     });
 });
 
-// Обработка кнопки "Назад" в браузере
+document.addEventListener('DOMContentLoaded', animateIncoming);
+
 window.addEventListener('popstate', () => {
+    // Сброс состояния при навигации через кнопки браузера
     if (transitionOverlay?.classList.contains('active')) {
-        transitionOverlay.classList.remove('active');
+        transitionOverlay.classList.remove('active', 'no-transition');
         document.body.style.overflow = '';
     }
 });
