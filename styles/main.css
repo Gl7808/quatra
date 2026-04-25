@@ -2093,8 +2093,7 @@ h4, .h4 {
   opacity: 1;
 }
 
-.page-transition__overlay.no-transition::before, .page-transition__overlay.no-transition::after,
-.page-transition__overlay.no-transition .page-transition__inner {
+.page-transition__overlay.no-transition::before, .page-transition__overlay.no-transition::after, .page-transition__overlay.no-transition .page-transition__inner {
   transition: none !important;
 }
 

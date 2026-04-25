@@ -46,9 +46,7 @@
 }
 
 .page-transition__overlay.no-transition {
-  &::before,
-  &::after,
-  .page-transition__inner {
+  &::before, &::after, .page-transition__inner {
     transition: none !important;
   }
 }

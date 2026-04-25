@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="23ce7bf0-e5d2-452d-a413-2cd06634852e" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/icons/hardware/chair.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/icons/hardware/cpu.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/icons/hardware/headphone.svg" afterDir="false" />
@@ -43,6 +42,7 @@
       <change beforePath="$PROJECT_DIR$/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cyber.html" beforeDir="false" afterPath="$PROJECT_DIR$/cyber.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food.html" beforeDir="false" afterPath="$PROJECT_DIR$/food.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games.html" beforeDir="false" afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/hero.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/hero.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
@@ -174,7 +174,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="97945000" />
+      <workItem from="1776547615029" duration="98546000" />
     </task>
     <servers />
   </component>
