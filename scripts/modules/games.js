@@ -1,4 +1,4 @@
-// ===== ДАННЫЕ ИГР (без rating) =====
+// ===== ДАННЫЕ ИГР =====
 const GAMES_DATA = [
     {
         id: 'cs2',
@@ -29,8 +29,8 @@ const GAMES_DATA = [
         title: 'VALORANT',
         genre: 'Тактический шутер',
         description: 'Командный шутер 5×5 с уникальными агентами и способностями. Точность, стратегия и тайминги — основа победы.',
-        preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
-        background: 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt0f87c5c0f8e7c5e5/641f7b5c6b8c6e0a7c8e5c5e/valorant-background.jpg'
+        preview: 'https://mega-plakat.ru/wp-content/uploads/2025/04/valorant_1-720x1024.png',
+        background: 'https://cdnb.artstation.com/p/assets/images/images/065/797/831/large/valencia-irawan-neon.jpg?1691376650'
     },
     {
         id: 'apex',
@@ -38,15 +38,15 @@ const GAMES_DATA = [
         genre: 'Королевская битва',
         description: 'Динамичный баттл-роял с героями-легендами. Собирай лут, используй способности и стань последним отрядом на арене.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
-        background: 'https://assets2.opencritic.com/images/7350/o/apex-legends.jpg'
+        background: 'https://avatars.mds.yandex.net/i?id=e939392854a36414b5064e58ccc5d03d_l-5704334-images-thumbs&n=13'
     },
     {
         id: 'minecraft',
         title: 'Minecraft',
         genre: 'Песочница / Выживание',
         description: 'Строй, исследуй, выживай. Бесконечные миры, кооператив до 10 игроков и режимы от выживания до мини-игр.',
-        preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
-        background: 'https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-KeyArt-1.jpg'
+        preview: 'https://i.pinimg.com/736x/f5/8b/5f/f58b5fd2233d444e1bfb857036d8bc7d.jpg',
+        background: 'https://avatars.mds.yandex.net/get-mpic/12511153/2a0000019934df6b1204ec6e1f23e8f50898/orig'
     },
     {
         id: 'gta5',
@@ -54,7 +54,7 @@ const GAMES_DATA = [
         genre: 'Action / Открытый мир',
         description: 'Лос-Сантос в твоём распоряжении. Свобода действий, онлайн-миссии и безграничные возможности для веселья с друзьями.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg',
-        background: 'https://media-rockstargames-com.akamaized.net/titles/5/gtav/images/gtav_social_1920x1080.jpg'
+        background: 'https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700670229.jpg'
     },
     {
         id: 'rocketleague',
@@ -62,7 +62,7 @@ const GAMES_DATA = [
         genre: 'Спортивный аркадный',
         description: 'Футбол на ракетных машинах! Быстро, зрелищно, азартно. Идеально для турниров и дружеских матчей 2×2 или 3×3.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/252950/header.jpg',
-        background: 'https://cdn2.unrealengine.com/rocketleague-keyart-1920x1080-1920x1080-1.jpg'
+        background: 'https://avatars.mds.yandex.net/i?id=4a3a5b6a04a74d7b060183eb6f2bf9ed_l-4592782-images-thumbs&n=13'
     },
     {
         id: 'tekken8',
@@ -70,7 +70,7 @@ const GAMES_DATA = [
         genre: 'Файтинг',
         description: 'Легендарная серия файтингов в новом поколении. Зрелищные комбо, онлайн-баттлы и турнирный режим для настоящих бойцов.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1778820/header.jpg',
-        background: 'https://assets.bandainamcoent.eu/tekken8/tekken8-key-visual-desktop.jpg'
+        background: 'https://i.pinimg.com/originals/c6/f7/4c/c6f74ce29772841d7c907e98f65153f8.jpg'
     },
     {
         id: 'sf6',
@@ -78,7 +78,7 @@ const GAMES_DATA = [
         genre: 'Файтинг',
         description: 'Новая глава культовой серии. Уникальная боевая система, режимы для новичков и профи, кроссплатформенные поединки.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1364780/header.jpg',
-        background: 'https://www.capcom-unity.com/images/sf6/key-art/sf6-key-art-desktop.jpg'
+        background: 'https://avatars.mds.yandex.net/i?id=dcbab69fa8723a0781639dca33d0224f_l-8325116-images-thumbs&n=13'
     },
     {
         id: 'codmw3',
@@ -86,7 +86,7 @@ const GAMES_DATA = [
         genre: 'FPS / Экшен',
         description: 'Интенсивные перестрелки, зомби-режим и мультиплеер с десятками карт. Быстрый экшен для фанатов серии.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg',
-        background: 'https://cdn1.epicgames.com/offer/cod/mw3-key-art-1920x1080.jpg'
+        background: 'https://xbox-store-checker.com/assets/upload/game/2023/08/optimize/9n60vm7tsq36-background.jpg'
     },
     {
         id: 'pubg',
@@ -94,7 +94,7 @@ const GAMES_DATA = [
         genre: 'Королевская битва',
         description: 'Классика жанра баттл-роял. 100 игроков, одна карта, один победитель. Тактика, стрельба и выживание в чистом виде.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg',
-        background: 'https://cdn.akamai.steamstatic.com/steam/apps/578080/ss_34c9de685225f135c0c1c5e4f5e5c5e5e5c5e5e5.1920x1080.jpg'
+        background: 'https://avatars.mds.yandex.net/i?id=c148220a80b8488fa7b534e3dc001ddbe7e1f6d2-11003753-images-thumbs&n=13'
     },
     {
         id: 'r6siege',
@@ -102,111 +102,122 @@ const GAMES_DATA = [
         genre: 'Тактический шутер',
         description: 'Разрушаемые локации, уникальные операторы и командная тактика. Штурм или защита — каждый раунд как новая операция.',
         preview: 'https://cdn.cloudflare.steamstatic.com/steam/apps/359550/header.jpg',
-        background: 'https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3YqJqJqJqJqJqJqJqJqJqJ/r6-siege-key-art.jpg'
+        background: 'https://staticg.sportskeeda.com/editor/2023/02/638f1-16771634136282-1920.jpg'
     }
 ];
 
 let gamesSwiper = null;
 let currentGameId = null;
 let isAnimating = false;
+let lastClickTime = 0;
 
 // ===== Рендер слайдов =====
 function renderGames() {
     const track = document.getElementById('gamesTrack');
     const isMobile = window.innerWidth <= 768;
+
+    if (!track) return;
     track.innerHTML = '';
 
     GAMES_DATA.forEach((game, index) => {
         const slide = document.createElement('div');
-        slide.className = `swiper-slide`;
+        slide.className = 'swiper-slide';
+        // data-swiper-slide-index нужен для realIndex в loop-режиме
+        slide.dataset.swiperSlideIndex = index;
+
         slide.innerHTML = `
-      <div class="games-sec__item ${index === 0 ? 'active' : ''}" data-id="${game.id}">
-        <div class="games-sec__item-preview">
-          <img src="${game.preview}" alt="${game.title}" loading="lazy">
-        </div>
-        <div class="games-sec__item-meta">
-          <strong>${game.title}</strong>
-          <span>${game.genre}</span>
-        </div>
-      </div>
-    `;
+            <div class="games-sec__item ${index === 0 ? 'active' : ''}" data-id="${game.id}">
+                <div class="games-sec__item-preview">
+                    <img src="${game.preview}" alt="${game.title}" loading="lazy">
+                </div>
+                <div class="games-sec__item-meta">
+                    <strong>${game.title}</strong>
+                    <span>${game.genre}</span>
+                </div>
+            </div>
+        `;
         track.appendChild(slide);
     });
 
-    // Инициализация первой игры
     if (GAMES_DATA[0]) {
         currentGameId = GAMES_DATA[0].id;
         updateGlobalBg(GAMES_DATA[0]);
         if (!isMobile) updateStageContent(GAMES_DATA[0]);
     }
 
-    // Инициализация Swiper
     initSwiper(isMobile);
 }
 
 // ===== Инициализация Swiper =====
 function initSwiper(isMobile) {
-    // Уничтожаем старый инстанс если есть
     if (gamesSwiper) {
         gamesSwiper.destroy(true, true);
         gamesSwiper = null;
     }
 
+    const swiperContainer = document.querySelector('.games-swiper');
+    if (!swiperContainer) return;
+
     if (isMobile) {
-        // На мобильном — вертикальный список, без Swiper
-        document.querySelector('.games-swiper').style.display = 'block';
+        swiperContainer.style.display = 'block';
         return;
     }
 
+    swiperContainer.style.display = '';
+
     gamesSwiper = new Swiper('.games-swiper', {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 10,
         grabCursor: true,
         freeMode: true,
-        mousewheel: {
-            enabled: true,
-            sensitivity: 1,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        // Авто-центрирование активного слайда
-        centeredSlides: false,
-        // Пагинация (опционально)
+        loop: true,
+        loopedSlides: GAMES_DATA.length,
+        mousewheel: { enabled: true, sensitivity: 1 },
+        keyboard: { enabled: true, onlyInViewport: true },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
             dynamicBullets: true,
         },
-        // Обработчики
+        // Отключаем встроенный click, чтобы не конфликтовал с нашим
         on: {
             slideChange: function () {
-                const activeSlide = this.slides[this.activeIndex];
-                const gameId = activeSlide?.querySelector('.games-sec__item')?.dataset.id;
-                if (gameId && gameId !== currentGameId) {
-                    handleGameSelect(gameId);
+                const realIndex = this.realIndex;
+                const game = GAMES_DATA[realIndex];
+                if (game?.id && game.id !== currentGameId) {
+                    handleGameSelect(game.id);
                 }
             },
         },
     });
 
-    // Клик по слайду
-    document.querySelectorAll('.games-sec__item').forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Игнорируем если был драг
-            if (gamesSwiper?.dragging) return;
+    // === Нативный клик-делегирование (надёжнее, чем on.click в Swiper) ===
+    swiperContainer.addEventListener('click', onSlideClick);
+}
 
-            const gameId = item.dataset.id;
-            if (gameId && gameId !== currentGameId) {
-                // Находим индекс и переходим
-                const index = GAMES_DATA.findIndex(g => g.id === gameId);
-                if (index !== -1) {
-                    gamesSwiper?.slideTo(index);
-                }
-            }
-        });
-    });
+// ===== Обработчик клика по слайду =====
+function onSlideClick(e) {
+    // Защита от двойных кликов и драга
+    const now = Date.now();
+    if (now - lastClickTime < 200) return;
+    lastClickTime = now;
+
+    if (gamesSwiper?.dragging) return;
+
+    const slide = e.target.closest('.swiper-slide');
+    if (!slide) return;
+
+    // Получаем реальный индекс из data-атрибута (работает и с клонами)
+    const slideIndex = parseInt(slide.dataset.swiperSlideIndex, 10);
+    if (isNaN(slideIndex)) return;
+
+    const game = GAMES_DATA[slideIndex];
+    if (game?.id && game.id !== currentGameId) {
+        // Если слайд уже активен — не делаем ничего
+        if (gamesSwiper?.realIndex === slideIndex) return;
+
+        handleGameSelect(game.id);
+    }
 }
 
 // ===== Обработка выбора игры =====
@@ -248,7 +259,9 @@ function playTransition(callback) {
 function updateGlobalBg(game) {
     const globalBg = document.getElementById('gamesGlobalBg');
     if (globalBg) {
+        globalBg.style.transition = 'opacity 0.3s ease';
         globalBg.style.opacity = '0.85';
+
         setTimeout(() => {
             globalBg.style.backgroundImage = `url(${game.background})`;
             globalBg.style.opacity = '1';
@@ -258,11 +271,14 @@ function updateGlobalBg(game) {
 
 // ===== Обновление контента =====
 function updateStageContent(game) {
-    document.getElementById('gamesGenre').textContent = game.genre;
-    document.getElementById('gamesTitle').textContent = game.title;
-    document.getElementById('gamesDesc').textContent = game.description;
+    const genreEl = document.getElementById('gamesGenre');
+    const titleEl = document.getElementById('gamesTitle');
+    const descEl = document.getElementById('gamesDesc');
 
-    // Обновляем активный класс на карточках
+    if (genreEl) genreEl.textContent = game.genre;
+    if (titleEl) titleEl.textContent = game.title;
+    if (descEl) descEl.textContent = game.description;
+
     document.querySelectorAll('.games-sec__item').forEach(el => {
         el.classList.toggle('active', el.dataset.id === game.id);
     });
@@ -270,11 +286,15 @@ function updateStageContent(game) {
 
 // ===== Инициализация =====
 document.addEventListener('DOMContentLoaded', () => {
-    // Ждём загрузки Swiper если подключен через defer
     if (typeof Swiper !== 'undefined') {
         renderGames();
     } else {
         document.addEventListener('swiper:ready', renderGames);
+        setTimeout(() => {
+            if (typeof Swiper !== 'undefined' && !gamesSwiper) {
+                renderGames();
+            }
+        }, 500);
     }
 });
 
@@ -284,7 +304,6 @@ window.addEventListener('resize', () => {
     clearTimeout(resizeTimerGames);
     resizeTimerGames = setTimeout(() => {
         const isMobile = window.innerWidth <= 768;
-        // Перерисовываем только если изменился режим
         const track = document.getElementById('gamesTrack');
         if (track) {
             track.innerHTML = '';

@@ -262,6 +262,7 @@
       gap: rem(4);
       display: none;
 
+
       @include mobile{
         display: flex;
       }
@@ -408,4 +409,21 @@
 
 .swiper{
   overflow: visible !important;
+}
+
+.games-sec__item-preview,
+.games-sec__item-preview img {
+  pointer-events: none;
+}
+
+/* Слайдер должен быть выше фона */
+.games-swiper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Курсор для интерактивности */
+.games-sec__item {
+  cursor: pointer;
+  user-select: none;
 }
