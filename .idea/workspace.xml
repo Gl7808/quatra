@@ -14,6 +14,7 @@
       <change afterPath="$PROJECT_DIR$/icons/hardware/mouse.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/icons/hardware/ram.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/icons/hardware/screen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/4.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/images/logo.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/images/w1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/images/w2.png" afterDir="false" />
@@ -29,6 +30,7 @@
       <change afterPath="$PROJECT_DIR$/scripts/modules/menu.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/pin.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/scheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/modules/triggers.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_address.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_box.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_contact.scss" afterDir="false" />
@@ -37,6 +39,7 @@
       <change afterPath="$PROJECT_DIR$/styles/blocks/_link-animation.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_main-link.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_pin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/blocks/_transition2.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_vertical.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar.html" afterDir="false" />
@@ -76,7 +79,6 @@
       <change beforePath="$PROJECT_DIR$/styles/blocks/cyber/_cyber-hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/bento.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/helpers/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/helpers/_mixins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
@@ -117,7 +119,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/quattralounge",
+    "last_opened_file_path": "D:/quattralounge/styles/blocks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,10 +130,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\quattralounge\styles\blocks" />
+      <recent name="D:\quattralounge\images" />
       <recent name="D:\quattralounge" />
       <recent name="D:\quattralounge\icons" />
-      <recent name="D:\quattralounge\images" />
-      <recent name="D:\quattralounge\styles\blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\quattralounge\scripts\modules" />
@@ -174,7 +176,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="99731000" />
+      <workItem from="1776547615029" duration="104087000" />
     </task>
     <servers />
   </component>

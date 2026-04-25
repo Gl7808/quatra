@@ -2,6 +2,7 @@
 
  import './modules/header-cyber.js';
 import './modules/burger.js';
+import './modules/triggers.js';
 import './modules/map.js';
 import './modules/scheme.js';
 import './modules/main-link.js';
@@ -17,5 +18,4 @@ import './modules/faq.js';
 import './modules/kitchen.js';
 import './modules/games.js';
 import './modules/game-list.js';
-
 

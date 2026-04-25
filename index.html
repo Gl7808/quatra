@@ -27,23 +27,23 @@
             <nav class="nav hidden-mobile">
                 <ul class="nav__list nav__list--main">
                     <li class="nav__item nav__item--main">
-                        <a href="#" class="nav__link">
-                            index
+                        <a href="index.html" class="nav__link">
+                            main
                         </a>
                     </li>
                     <li class="nav__item nav__item--main">
-                        <a href="#" class="nav__link">
-                            about
+                        <a href="#pc" class="nav__link">
+                            pc-zone
                         </a>
                     </li>
                     <li class="nav__item nav__item--main">
-                        <a href="#" class="nav__link">
-                            zone
+                        <a href="#lounge" class="nav__link">
+                            lounge-zone
                         </a>
                     </li>
                     <li class="nav__item nav__item--main">
-                        <a href="#" class="nav__link">
-                            event
+                        <a href="#contact" class="nav__link">
+                            contact
                         </a>
                     </li>
                 </ul>
@@ -66,9 +66,11 @@
         <div class="hero__inner container">
             <div class="main-link">
                 <div class="main-link__title">
-                    <h1>QUATTRA</h1>
+                    <h1 class="text">QUATTRA</h1>
+
+
                 </div>
-                <div class="box">
+                <div class="box text">
                     <div class="box__slider">
                         <div class="box__slider-track">
                             <span class="box__text">
@@ -86,16 +88,16 @@
 </section>
 <section class="section pin">
     <div class="game">
-        <div class="game__inner container">
+        <div class="game__inner container" id="pc">
             <div class="game__container">
                 <div class="block-title" data-aos="fade-in" data-aos-delay="500">
-                    <h2>
+                    <h2 class="">
                         Игра без компромисов
                         <span>
                         Топовое железо
                     </span>
                     </h2>
-                    <p class="block-subtitle">
+                    <p class="block-subtitle text">
                         Топовое железо уже настроено. Никаких ползунков графики, просадок FPS и жертв качеством. Запускайте игру и погружайтесь в процесс без ограничений — только максимальная детализация, стабильная производительность и полный комфорт.
                     </p>
                 </div>
@@ -337,29 +339,29 @@
 </section>
 <section class="section gallery-bento hidden-mobile">
     <div class="gallery-bento__inner container">
-        <div class="gallery-bento__grid" id="gallery-bento">
-            <div class="gallery-bento__item">
+        <div class="gallery-bento__grid grid" id="gallery-bento">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/1.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/2.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/4.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/4.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/5.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/6.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/7.png" alt="">
             </div>
-            <div class="gallery-bento__item">
+            <div class="gallery-bento__item grid-item">
                 <img src="images/atmoshpere/8.png" alt="">
             </div>
         </div>
@@ -367,7 +369,7 @@
 </section>
 
 <section class="section lounge" id="target-section">
-    <div class="lounge__inner container">
+    <div class="lounge__inner container" id="lounge">
         <div class="block-title" data-aos="fade-in" data-aos-delay="500">
             <h2>QUATTRA LOUNGE <span>Лучшее решение для отдыха</span></h2>
             <p class="block-subtitle">
@@ -378,16 +380,16 @@
         <div class="lounge__track">
             <!-- Карточка 1 -->
             <div class="lounge__card">
-                <div class="lounge__image" data-aos="fade-in">
-                    <span class="lounge__number"><b>01</b>  vip zone</span>
-                    <img src="images/atmoshpere/4.png" alt="VIP зона">
+                <div class="lounge__image " data-aos="fade-in">
+                    <span class="lounge__number "><b>01</b>  vip zone</span>
+                    <img class="gsap__img" src="images/atmoshpere/4.png " alt="VIP зона">
                 </div>
-                <div class="lounge__content">
+                <div class="lounge__content ">
                     <h3 class="lounge__title">VIP-зона</h3>
-                    <p class="lounge__text">
+                    <p class="lounge__text ">
                         Приватное пространство с звукоизоляцией, кастомными креслами и индивидуальным контролем климата. Идеально для командных сессий или полного погружения без посторонних.
                     </p>
-                    <button class="button button__scheme" aria-label="Открыть карту">
+                    <button class="button button__scheme " aria-label="Открыть карту">
                         Схема клуба
                     </button>
                 </div>
@@ -397,7 +399,7 @@
             <div class="lounge__card">
                 <div class="lounge__image" data-aos="fade-in">
                     <span class="lounge__number"><b>02</b>  hookah</span>
-                    <img src="images/atmoshpere/2.png" alt="Кальянная зона">
+                    <img class="gsap__img" src="images/atmoshpere/2.png" alt="Кальянная зона">
                 </div>
                 <div class="lounge__content">
                     <h3 class="lounge__title">Паровой коктель</h3>
@@ -412,7 +414,7 @@
             <div class="lounge__card">
                 <div class="lounge__image" data-aos="fade-in">
                     <span class="lounge__number"><b>03</b>  bar</span>
-                    <img src="images/atmoshpere/1.png" alt="Бар и чилл">
+                    <img class="gsap__img"  src="images/atmoshpere/1.png" alt="Бар и чилл">
                 </div>
                 <div class="lounge__content">
                     <h3 class="lounge__title">Бар</h3>
@@ -429,7 +431,7 @@
             <div class="lounge__card ">
                 <div class="lounge__image" data-aos="fade-in">
                     <span class="lounge__number"><b>04</b>  KITCHEN</span>
-                    <img src="images/atmoshpere/1.png" alt="Бар и чилл">
+                    <img class="gsap__img"  src="images/atmoshpere/1.png" alt="Бар и чилл">
                 </div>
                 <div class="lounge__content">
                     <h3 class="lounge__title">Кухня</h3>
@@ -450,7 +452,7 @@
 
 <section class="section">
     <div class="contact">
-        <div class="contact__inner container">
+        <div class="contact__inner container" id="contact">
             <div class="address">
                 <div class="address__inner">
 
@@ -671,8 +673,6 @@
 </footer>
 <div class="sidebar">
     <div class="sidebar__inner">
-
-        <!-- Кнопка закрытия внутри сайдбара -->
         <button class="burger burger2" aria-label="Закрыть меню">
             <span></span>
             <span></span>
@@ -682,16 +682,19 @@
             <div class="sidebar__nav">
                 <ul class="sidebar__list">
                     <li class="sidebar__item">
-                        <a href="/index.html" class="sidebar__link">INDEX</a>
+                        <a href="index.html" class="sidebar__link">Главная</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="/cyber.html" class="sidebar__link">CYBERCLUB</a>
+                        <a href="games.html" class="sidebar__link">Игры</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="/food.html" class="sidebar__link">KITCHEN</a>
+                        <a href="lounge.html" class="sidebar__link">Лаунж</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="/lounge.html" class="sidebar__link">LOUNGE</a>
+                        <a href="food.html" class="sidebar__link">Кухня</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="bar.html" class="sidebar__link">Бар</a>
                     </li>
                 </ul>
             </div>
@@ -773,7 +776,8 @@
     </div>
 </div>
 <div class="page-transition__overlay active hidden-mobile">
-    <div class="page-transition__inner"></div>
+    <div class="page-transition__inner">
+    </div>
 </div>
 <div class="hardware__overlay">
     <div class="hardware__overlay__inner">
