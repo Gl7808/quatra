@@ -1,0 +1,282 @@
+.registration-v2 {
+  width: 100%;
+  margin: 0 auto;
+  padding: rem(40);
+  background-color: var(--color-dark-1);
+  min-height: 100dvh;
+  position: relative;
+  padding-top: rem(100);
+
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: rem(60);
+    flex-wrap: wrap;
+    gap: rem(20);
+  }
+
+  &__title {
+    font-size: rem(48);
+    color: var(--color-light-10);
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(80);
+    align-items: start;
+  }
+
+  @media (max-width: 1024px) {
+    &__grid { grid-template-columns: 1fr; gap: rem(50); }
+    &__title { font-size: rem(36); }
+  }
+}
+
+// Левая колонка
+.team-name-field {
+  margin-bottom: rem(30);
+  &__input {
+    width: 100%;
+    font-size: rem(32);
+    font-weight: 700;
+    color: var(--color-light-10);
+    background: transparent;
+    border: none;
+
+    padding: rem(10) 0;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent-lounge);
+      color: var(--color-light-10);
+    }
+    &::placeholder { color: var(--color-accent-lounge); }
+  }
+}
+
+.team-logo-field {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: rem(400);
+  background: var(--color-dark-10);
+  border: var(--border-def);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s;
+
+  &:hover { border-color: var(--color-accent-lounge); }
+
+  &__icon {
+    font-size: rem(60);
+    color: var(--color-dark-40);
+    transition: opacity 0.3s;
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &.has-logo {
+    .team-logo-field__icon { opacity: 0; }
+    .team-logo-field__img { opacity: 1; }
+  }
+}
+
+// Правая колонка
+.section-subtitle {
+  font-size: rem(24);
+  color: var(--color-light-10);
+  margin-bottom: rem(20);
+}
+
+.captain-slot, .slot-btn {
+  width: 100%;
+  padding: rem(20);
+  font-size: rem(18);
+  color: var(--color-light-10);
+  border: var(--border-def);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  margin-bottom: rem(15);
+
+  &:hover {
+    border-color: var(--color-accent-lounge);
+    transform: translateY(-2px);
+  }
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  margin-bottom: rem(15);
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(15) rem(20);
+  border: var(--border-def);
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateX(4px);
+    background-color: var(--color-dark-10);
+
+  }
+
+  &__nick {
+    font-size: rem(16);
+    font-weight: 800;
+    color: var(--color-light-10);
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+    svg{
+      height: rem(20);
+    }
+  }
+
+  &__remove {
+    background: transparent;
+    border: none;
+    color: #ff4d4f;
+    cursor: pointer;
+    font-size: rem(15);
+    padding: 0 rem(5);
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: rem(18);
+  font-size: rem(18);
+  font-weight: 600;
+  background: var(--color-accent-lounge);
+  color: var(--color-dark-12);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: rem(10);
+
+  &:hover { opacity: 0.9; }
+}
+
+// Модальное окно
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+
+  &.active { opacity: 1; pointer-events: auto; }
+}
+
+.modal-box {
+  background: var(--color-dark-12);
+  padding: rem(30);
+  width: 90%;
+  max-width: rem(500);
+  color: var(--color-light-10);
+  position: relative;
+  transform: scale(0.95);
+}
+
+.modal-close {
+  position: absolute;
+  top: rem(15);
+  right: rem(15);
+  background: none;
+  border: none;
+  color: var(--color-dark-40);
+  font-size: rem(28);
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0 0 rem(20);
+  font-size: rem(24);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+
+  input {
+    width: 100%;
+    padding: rem(14);
+    background: var(--color-dark-10);
+    border: 1px solid var(--color-dark-40);
+    color: var(--color-light-10);
+    font-size: rem(15);
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent-lounge);
+    }
+    &[type="date"] { color-scheme: dark; }
+  }
+
+  button[type="submit"] {
+    margin-top: rem(10);
+    padding: rem(14);
+    background: var(--color-accent-lounge);
+    color: var(--color-dark-12);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.btn__wrapper{
+  display: flex;
+  gap: rem(50);
+}
+
+.slot-btn{
+  margin-bottom: 0;
+  background: var(--color-dark-40);
+  text-align: center;
+}
+.submit-btn{
+  margin-top: 0;
+}
+
+.game-switcher__btn {
+  padding: rem(10);
+  border: var(--border-def);
+  background: none;
+  color: var(--color-light-40);
+
+  &.active{
+    color: var(--color-accent-lounge);
+  }
+}

@@ -17,7 +17,7 @@ gsap.from(".grid-item", {
 gsap.to(".gsap__img", {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
     duration: 1.2,
-    ease: "power3.inOut",
+    ease: "power4.out",
     scrollTrigger: ".gsap__img"
 });
 
@@ -29,5 +29,6 @@ gsap.to(path, {
     duration: 1.5,
     scrollTrigger: path
 });
+
 
 

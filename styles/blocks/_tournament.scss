@@ -1,7 +1,85 @@
 .tournament{
   min-height: 100vh;
   position: relative;
+  background-color: var(--color-dark-12);
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+                    90deg,
+                    rgba(10,10,10,0.96) 0%,
+                    rgba(10,10,10,0.75) 50%,
+                    rgba(10,10,10,0.9) 100%
+    );
+    z-index: 1;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+            linear-gradient(rgba(152, 255, 226, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(152, 255, 226, 0.05) 1px, transparent 1px);
+    //background-size: rem(100) rem(100);
+    z-index: 2;
+    mask-image: radial-gradient(circle at 70% 50%, black 30%, transparent 70%);
+  }
+
+  @include flex-center();
   &__inner{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+    height: 100%;
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: center;
+    gap: rem(10);
+    p{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: rem(15);
+      svg{
+        height: 30px;
+        animation:smooth-bounce-y 2s  infinite;
+      }
+    }
+  }
+
+  &__button{
+    font-size: rem(25);
+    border-color: var(--color-light-40);
+
+    @include mobile{
+      font-size: rem(15);
+    }
 
   }
+  &__date {
+    text-align: center;
+    font-size: rem(18);
+    color: var(--color-light-40);
+    margin-top: rem(10);
+
+  }
+  &__subtitle{
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__title{
+    align-items: center;
+    h1 {
+      font-size: rem(60);
+      text-align: center;
+      line-height: rem(70);
+    }}
+
 }

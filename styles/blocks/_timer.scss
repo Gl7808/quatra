@@ -1,0 +1,76 @@
+.timer{
+  display: flex;
+  gap: rem(20);
+  justify-content: center;
+  padding: rem(20);
+  border: var(--border-def);
+  position: relative;
+
+
+  &:after{
+    content: '';
+    height: 5px;
+    width: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-accent-lounge);
+    animation: borderBottom 30s ease infinite;
+  }
+
+
+  @include mobile{
+    padding: 0;
+    border: none;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: rem(5);
+    border: var(--border-def);
+    padding: rem(10);
+
+
+
+
+  }
+  &__number{
+    font-size: rem(150);
+    font-weight: 800;
+    font-family: Roboto;
+    line-height: rem(120);
+    color: var(--color-accent-lounge);
+    position: relative;
+
+
+    @include mobile{
+      font-size: rem(40);
+      line-height: rem(30);
+    }
+
+  }
+  &__text{
+    text-align: center;
+    text-transform: lowercase;
+  }
+}
+
+
+@keyframes borderBottom {
+  0%{
+    width: 2px;
+  }
+  25%{
+    left: 50%;
+  }
+  50%{
+    left: 100%;
+  }
+  75%{
+    left: 50%;
+
+  }
+  100%{
+    left: 0;
+  }
+}
