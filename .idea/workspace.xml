@@ -24,7 +24,6 @@
       <change afterPath="$PROJECT_DIR$/scripts/modules/registration.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/split.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/tariff.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/modules/timer.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/scripts/modules/tournament-slider.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/send_registration.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_cards.scss" afterDir="false" />
@@ -34,7 +33,6 @@
       <change afterPath="$PROJECT_DIR$/styles/blocks/_tariff.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_timer.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/styles/blocks/_tournament-slider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tarif.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar.html" afterDir="false" />
@@ -46,6 +44,7 @@
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/modules/bento.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/bento.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/modules/link_animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/link_animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/modules/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/modules/triggers.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modules/triggers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_variables.scss" afterDir="false" />
@@ -56,6 +55,7 @@
       <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarif.html" beforeDir="false" afterPath="$PROJECT_DIR$/tarif.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +152,7 @@
       <workItem from="1776165074107" duration="6129000" />
       <workItem from="1776267177088" duration="8169000" />
       <workItem from="1776354869669" duration="34026000" />
-      <workItem from="1776547615029" duration="144830000" />
+      <workItem from="1776547615029" duration="145435000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ const tournamentEvent = {
     title: "QUATTRA OPEN 2026",
     subtitle: "Турнир по Counter Strike 2. 5x5 team",
     date: new Date("2026-05-08"), // Event date
-    backgroundImage: "../images/cyber/openteam.png"
+    backgroundImage: "./../images/cyber/openteam.png"
 };
 
 // DOM Elements
